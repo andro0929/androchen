@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:fb="http://www.facebook.com/2008/fbml"
+    xmlns:og="http://ogp.me/ns#">
+ <head>
+  <title>Andro's Facebook SDK Demo</title>
+  <!-- Essential information for facebook plugins -->
+  <meta property="fb:admins" content="100000800779717"/>
+  <meta property="fb:app_id" content="300177676757981"/>
+  <!-- Essential information for Open Graph -->
+  <meta property="og:title" content="Andro's Facebook SDK Demo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Andro's Facebook SDK Demo" />
+  <meta property="og:description" content="This is Andro's Facebook SDK Demo, my mobile web tutorial app." />
+  <meta property="og:url" content="http://androchen.qov.tw/facebook/"/>
+  <meta property="og:image" content="http://0.gravatar.com/avatar/ed22060f4a5cad9bf60f887098dc3da0?size=497.jpg"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="addon/addon.css" rel="stylesheet">  
+ </head> 
+ <body> 
+    <div id="fb-root"></div>
+
+    <div class='span6'>
+      <div id='header' style='margin-top:15px; background-color:#F8E5E5;'><a href='http://androchen.yolasite.com/'>
+        <a href='http://www.5945.com.tw/blog/2012/11/02/facebook-mobile-web-step-by-step/'>[教學]</a> Step by step – 5 步實作 Facebook Mobile Web<br>
+        <a href='http://androchen.yolasite.com/'>Andro Chen</a> © Since November, 2012
+        <br><br>
+        <fb:like class="info-after-login" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></fb:like>
+      </div>
+      <br>
+      <div id="user-info"></div>
+      <br>
+      <div id="login">
+          <p><button class="btn" onClick="loginUser();">Login</button></p>
+      </div>
+      <div class="info-after-login">
+        <div id="logout">
+            <p><button class="btn" onClick="FB.logout();">Logout</button></p>
+        </div>
+        <a id="publish-story" href="#" onclick="publishStory();">Publish feed story</a><br>
+        <a id="get-friends" href="#" onclick="getUserFriends();">Get friends</a><br>
+        <a id="get-likes" href="#" onclick="getUserLikes();">Get likes</a><br>
+        <h5>All suggestions are welcomed! 請<a href='mailto:andro0929@gmail.com'>給我意見</a>讓我能做得更好 :)</h5>
+        <div class="fb-comments" data-href="http://androchen.qov.tw/facebook/" data-num-posts="2" data-width="470"></div>
+      </div>
+
+    </div>
+
+    <div class='span4'>
+      <br>
+      <div class="info-after-login">
+        <div id="user-friends"></div>        
+      </div>
+    </div>
+
+    <div class='span4'>
+      <br>
+      <div class="info-after-login">
+        <div id="user-likes"></div>
+      </div>
+    </div>
+
+    <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+  <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '300177676757981', // App ID
+          channelUrl : 'http://androchen.qov.tw/facebook/index.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+        FB.Event.subscribe('auth.statusChange', handleStatusChange);
+      };
+      function handleStatusChange(response) {
+        document.body.className = response.authResponse ? 'connected' : 'not_connected';
+
+        if (response.authResponse) {
+          console.log(response);
+          updateUserInfo(response);
+        }
+      }
+      // Load the SDK Asynchronously
+      (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+      }(document));
+
+      function loginUser() {    
+        FB.login(function(response) { }, {scope:'user_likes'});     
+      }
+
+      // Use the Graph API
+      function updateUserInfo(response) {
+        FB.api('/me', function(response) {
+          document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+        });
+      }
+
+      function publishStory() {
+        FB.ui({
+          method: 'feed',
+          name: 'Andro Chen is implementing facebook APIs!',
+          caption: 'Andro Chen\'s facebook API demos',
+          description: 'Simple demos of some facebook APIs. Click to see some API usage demos.',
+          link: 'http://androchen.qov.tw/facebook',
+          picture: 'http://0.gravatar.com/avatar/ed22060f4a5cad9bf60f887098dc3da0'
+        }, 
+        function(response) {
+          console.log('publishStory response: ', response);
+        });
+        return false;
+      }
+
+      function getUserFriends() {
+        FB.api('/me/friends&fields=name,picture,link', function(response) {
+          console.log('Got friends: ', response); 
+          if (!response.error) {
+            var markup = '';
+            var friends = response.data;
+            var rnd = Math.round(100*Math.random());
+
+            for (var i=rnd; i < friends.length && i < rnd+25; i++) {
+              var friend = friends[i];
+              markup += '<img src="' + friend.picture.data.url + '"> ' + 
+                        '<a href="' + friend.link + '">' + 
+                        friend.name + '</a>' + '<br>';
+            }
+            document.getElementById('user-friends').innerHTML = 
+              "Friends list (25 listed)<br>" + markup;
+          }
+        });
+      }
+
+      function getUserLikes() {
+        FB.api('/me/likes&fields=name,picture,link', function(response) {
+          console.log('Got likes: ', response); 
+          if (!response.error) {
+            var markup = '';
+            var likes = response.data;
+            var rnd = Math.round(10*Math.random());
+
+            for (var i=rnd; i < likes.length && i < rnd+25; i++) {
+              var like = likes[i];
+              markup += '<img src="' + like.picture.data.url + '"> ' + 
+                        '<a href="' + like.link + '">' + 
+                        like.name + '</a>' + '<br>';
+            }
+            document.getElementById('user-likes').innerHTML = 
+              "Likes list (25 listed)<br>" + markup;
+          }
+        });
+      }
+
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36082223-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+  </script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ </body>
+ <style>
+  body.connected #login { display: none; }
+  body.connected .info-after-login { display: block; }
+  body #login { display: block; }
+  body .info-after-login { display: none; }
+ </style>
+</html>

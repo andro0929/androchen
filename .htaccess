@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|asset|css|img|js|projects|wordpress|robots\.txt|favicon\.ico|$)
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+RedirectMatch 301 ^/hireme.php$ /hireme
+RedirectMatch 301 ^/project.php$ /project

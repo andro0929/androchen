@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <!-- Powered by Twitter Bootstrap, Coded by Andro Chen -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>服務設計hw - 台灣設計師週 參觀心得</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/SD_hw1.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/SD_hw1.js"></script>
+        <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="js/easing.js" type="text/javascript"></script>
+        <script src="js/jquery.ui.totop.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        
+    <div id='body_frame' class='row-fluid'>
+        <div class='span12' id='header_frame'>
+            <!-- Facebook Login -->
+            <div id="fb-root"></div>
+            <script>
+              window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '374493792627146', // App ID
+                  channelUrl : 'http://5945.tw/5945WebApp/request.html', // Channel File
+                  status     : true, // check login status
+                  cookie     : true, // enable cookies to allow the server to access the session
+                  xfbml      : true  // parse XFBML
+                });
+
+                FB.Event.subscribe('auth.statusChange', handleStatusChange);
+              };
+              
+              function handleStatusChange(response) {
+                 document.body.className = response.authResponse ? 'connected' : 'not_connected';
+                 if (response.authResponse) {
+                   console.log(response);
+                   updateUserInfo(response);
+                 }
+               }
+               
+              // Load the SDK Asynchronously
+              (function(d){
+                 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement('script'); js.id = id; js.async = true;
+                 js.src = "//connect.facebook.net/zh_TW/all.js";
+                 ref.parentNode.insertBefore(js, ref);
+               }(document));
+               
+               function loginUser() {    
+                 FB.login(function(response) { }, {scope:'email'});     
+               }               
+                
+                function updateUserInfo(response) {
+                  FB.api('/me', function(response) {
+                    document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+                  });
+                }
+                
+                function publishStory() {
+                    request_str = document.forms["frm"]["form-input"].value;
+                  FB.ui({
+                    method: 'feed',
+                    name: '我在 5945呼叫師傅 填了裝修需求單!',
+                    caption: '',
+                    description: request_str,
+                    link: 'http://5945.tw',
+                    picture: 'http://5945.tw/image/5945_logo.png'
+                  }, 
+                  function(response) {
+                    console.log('publishStory response: ', response);
+                  });
+                  return false;
+                }
+                
+                function sendRequest() {
+                  FB.ui({
+                    method: 'apprequests',
+                    message: 'System notification to users automatically',
+                  }, 
+                  function(response) {
+                    console.log('sendRequest response: ', response);
+                  });
+                }
+            </script>
+            <br>
+            <div id="user-info"></div>
+            <div id="login" style="margin: 5px auto; width: 250px;">
+                <p><img src="http://5945.tw/image/fb_login_btn.png" onClick="loginUser();"></p>
+            </div>
+            <div id="logout" style="margin: 5px auto; width: 250px;">                
+                <p><button class="btn" onClick="FB.logout(location.href='request.html');">登出</button></p>
+            </div>
+            <!-- 置頂輪播圖 -->
+            <h2>服務設計hw - 台灣設計師週 參觀心得</h2>
+            <div align='right'>NTUEE b97901015 陳俊安</div>
+            <hr />            
+            <div id="roll_img_block">
+                <ul class="list">
+                    <li><img src="image/twdw2012_logo.jpg"></li>
+                    <li><img src="image/twdw2012_1.jpg"></li>
+                    <li><img src="image/twdw2012_work1.jpg"></li> 
+                    <li><img src="image/twdw2012_work2.jpg"></li> 
+                    <li><img src="image/twdw2012_work3.jpg"></li> 
+                    <li><img src="image/twdw2012_work4.jpg"></li> 
+                    <li><img src="image/twdw2012_work5.jpg"></li> 
+                    <li><img src="image/twdw2012_2.jpg"></li> 
+                    <li><img src="image/twdw2012_3.jpg"></li> 
+                    <li><img src="image/twdw2012_4.jpg"></li>
+                </ul>
+            </div>            
+            <hr />
+            
+            <!-- 內文 -->
+            <div class='row-fluid'>
+                <!-- 左圖區 -->
+                <div class='span4'>
+                    <br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_logo.jpg"></a>
+                    <br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_1.jpg"></a>
+                    <br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_work1.jpg"></a>
+                    <br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_work3.jpg"></a>
+                    <br><br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_work2.jpg"></a>
+                    <br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_3.jpg"></a>
+                    <br><br><br><br><br>
+                    <a target='_blank' href="http://www.designersweek.tw/index.html"><img src="image/twdw2012_4.jpg"></a>
+                </div>        
+                
+                <!-- 右文字區 -->
+                <div class='span8'>
+                    <h4>FLOW - 創意川流不息</h4>
+                    <p>9/17 一早，服務設計課的大家就在花博爭豔館前準備跟著賴宏誌老師一起參觀一年一度的<a href="http://www.designersweek.tw/index.html">台灣設計師週</a>。這次的大會主題 FLOW (Force, Link, Opportunity, Worldwide)，詮釋了台灣設計週存在的初衷是為了<strong>分享生活設計美學、藉由設計的力量串連整個城市的生活</strong>。事實上，我們也在這個展場中看到了非常多與生活密切結合的作品，每一樣都令人耳目一新。</p>
+                    <p>走進爭豔館時，感覺是十分舒適的。也許是因為我們一大早就去了，又或著是挑高空間的作用，讓人有種心曠神怡的感覺。而這麼大的展場，也讓更多的設計師們能在此完全發揮作品的效果。</p>
+                    <br>
+                    <h4>設計師觀點 - 主題聯展</h4>
+                    <p>第一個呈現在我們眼前的，就是主題聯展。它串聯了各個不同的設計主題，並且讓各個設計師用作品去詮釋這個主題。裡面的內容相當有趣，可以說是整個展覽中我最喜歡的部份。</p>
+                    <p>最有趣的，總是那些體現生活現象的作品，在觀賞的同時也讓我們有省思的機會。放著賈柏斯遺照的iPhone牌位便是一個令人不禁嘴角一彎的應用作品。「智慧? Smart?」想探討的是，現代人以智慧型手機維生的生活，其實充滿著很多吊詭。原本是要便利生活、拉近人與人之間距離的工具，卻漸漸地疏離了人們之間的互動。這是一直以來都被熱烈討論的話題，而「智慧? Smart?」這個主題便是以正反辨證的方式，論述改變我們生活的智慧型手機，帶來的正面或負面的影響。究竟怎麼樣才叫 smart? 恐怕只有使用者自己才能決定了。</p>
+                    <p>「那年的時光2 - 老戲院」想必勾起了很多人的兒時記憶。在導覽時聽到「點心五十禮」的想法，真是覺得妙極了！簡單來說，就是以台南市為行銷主題，創造出能夠讓那些購買者不斷想起台南的好的伴手禮。像是做成台南名產 - 凸餅樣的撲滿，更是結合了文化的意涵，在傳統之中添加創新的元素。</p>
+                    <p>還有提到環境永續共生的「城市友善鳥」與「愛明日行動」，我在這些城市空間設計的作品構想中，看到了另一種都市的可能性。那就是自然與人類的共存。我們總是要學著跟大自然好好相處，而這個主題正是用建築的角度切入，嘗試尋求更好的解答。</p>
+                    <br>
+                    <h4>新生活設計美學</h4>
+                    <p>「共乘」也是一個很有趣的主題。他們利用貼近生活的細節，尋找材料的各種可能性，帶來溫暖與感動的設計。用不同轉動速度來磨出不同表面亮度的時鐘，是我看到最驚豔的作品。反轉了一般人的思考，再創作出這樣一個微妙的存在。</p>
+                    <p>在整個主題聯展中，我對於設計師們的想法感到佩服。他們可以將我們談論著的話題，轉為一件件作品，在有限的範圍內創造無限的意境。而更重要的是，這些主題都<strong>試圖在用另一種角度去詮釋我們的日常生活</strong>。那些最微不足道的細節，往往就是最能發揮想像空間的地方。</p>
+                    <p>其他像是設計產業形象展等等，也有很多精彩的設計作品。「木匠兄妹」的攤位裡就有很多可愛的產品。其實裡面還有非常多有趣的內容，不過因為爭豔館實在蠻大的，加上我下午還有課，只好匆匆忙忙地趕回學校去了。</p>
+                    <br>
+                    <h4>心的體驗</h4>
+                    <p>這次主視覺設計概念是<strong>交流互動</strong>。利用傳統童玩的「吹墨」遊戲，因吹者吹出的力道不同，讓油彩、油墨的本身因紙張的表面張力所產生的流動變化，創造出不同形狀的概念來傳達靈感的湧流，再不斷地匯聚、漫延至各地。在最後出口的這一面留言牆中，一個個我們的想法也在這裡爆炸，擦出彼此創意的火花。</p>
+                    <p>的確，就像電影《食神》裡的那句經典台詞：
+                    <blockquote>只要有心，人人都可以是食神。</blockquote>生活中只要有心，人人都可以是創意的設計師。台灣設計週的這個經驗，讓我在還沒有深入地瞭解服務設計之前，先有了一個"設計可以怎麼做"的體驗。相信在之後的服務設計課程當中，我能吸收到更多關於服務、關於設計的精髓。</p>
+                    <br>
+                    <a href="#" id="toTop" style="display: inline; "><span id="toTopHover" style="opacity: 0; "></span>To Top</a>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class='row-fluid'>
+                <hr />
+                <div>NTUEE b97901015 陳俊安</div>
+                <div>About me: <a target='_blank' href='http://androchen.yolasite.com'>Andro chen</a></div>
+                <br>
+        </div>        
+    </div>
+    </body>
+<style>
+body.connected #login { display: none; }
+body.connected #logout { display: block; }
+body.connected #suggest { display: block; }
+body.connected .item_box { display: block; }
+body #login { display: block; }
+body #logout { display: none; }
+body #suggest { display: none; }
+body .item_box { display: none; }
+</style>
+</html>

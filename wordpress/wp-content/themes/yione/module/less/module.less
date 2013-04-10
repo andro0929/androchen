@@ -1,0 +1,175 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300');
+
+*:link, *:visited, *:hover, *:active, *:focus , *{
+	-webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+::selection {
+	background: #888;
+	color: #fff;
+}
+::-moz-selection {
+	background: #888;
+	color: #fff;
+}
+body {
+	font: 15px/1.7em 'Open Sans', sans-serif;
+	font-weight: 400;
+	color:#666;
+}
+input, textarea {
+	font: 15px/1.7em 'Open Sans', sans-serif;
+}
+p {
+	letter-spacing: 0.07em;
+	font-size: 1em;
+	line-height: 2em;
+}
+img:hover {
+	opacity: 0.75;
+}
+a:hover {
+	color: @txtcolorhov;
+	text-decoration: underline;
+}
+a {
+	color: @txtcolor;
+	text-shadow: 0px 1px 2px #FFF;
+	text-decoration: none;
+	vertical-align: baseline;
+}
+p {
+	vertical-align: bottom;
+	text-shadow: 0px 0px 1px #FFF;
+}
+blockquote {
+  background: #EEE;
+  padding: 15px 20px;
+}
+blockquote p{
+  font-weight:400;
+}
+form {
+	margin: 0;
+}
+input[type="text"]:focus {
+	opacity: 0.75;
+}
+input[type="text"] {
+	border-radius: 0;
+}
+textarea {
+	width: 95%;
+	font-size: 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+	font-family: "Open Sans", sans-serif;
+}
+h1, h1 a {
+	font-size: 45px;
+  font-family: "Open Sans", "微軟正黑體", sans-serif;
+  color: #777;
+}
+h1.sitename{
+  margin-top: 1em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+h1.sitename a{
+  text-decoration: none;
+}
+h2 {
+  font-size: 25px;
+  font-family: "Open Sans", "微軟正黑體", sans-serif;
+  color: #333;
+  line-height: 3;
+  font-weight: 300;
+  border-bottom: 1px solid #EEE;
+}
+h2.description{
+  margin: 0 0 20px 0;
+  color: #BBB;
+  font-weight: 300;
+  border: none;
+  line-height:1;
+}
+h3 {
+	font-size: 23px;
+	font-family: "Open Sans", "微軟正黑體", sans-serif;
+	color: @txtcolor;
+	line-height: 1.5;
+	padding: 0 0px 0 13px;
+	display: inline-block;
+	font-weight: 300;
+}
+.rps_sldrtitle {
+	font-size: 23px !important;
+	font-family: "Open Sans", "微軟正黑體", sans-serif !important;
+}
+h4 {
+	font-size: 20px;
+	margin: 20px 0;
+	line-height: 23px;
+}
+h5 {
+	font-size: 18px;
+	margin: 15px 0;
+	line-height: 15px;
+}
+h6 {
+	font-size: 15px;
+	margin: 15px 0;
+	line-height: 15px;
+	font-weight: bold;
+}
+input[type="submit"] {
+	border: none;
+  margin-bottom: 8px;
+  padding: 11px 11px;
+  background: #5ea8de;
+  color: #FFF;
+  .box_mixar;
+}
+input[type="text"]{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 80%;
+}
+.form-search {
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+	margin: 10px 0;
+	background: #FFF;
+}
+.form-search input[type="text"] {
+	border: 1px solid #FFF;
+	border-radius: 5px 0 0 5px;
+	box-shadow: none;
+	max-width: 100%;
+	width: 84%;
+	min-width: 75%;
+}
+.form-search:hover, .form-search:focus, .form-search:active {
+	background: #fff;
+	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+	border-color: rgba(82, 168, 236, 0.8);
+}
+.background-inner{
+  background: @color;
+  color:#FFF;
+}
+.border-inner{
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
