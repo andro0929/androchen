@@ -1,14 +1,15 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?=base_url("css/bootstrap.min.css")?>">
 <link rel="stylesheet" href="<?=base_url("css/bootstrap-responsive.min.css")?>">
 <link rel="stylesheet" href="<?=base_url("css/addon.css")?>">  
 <link rel="stylesheet" href="<?=base_url("css/site.css")?>">
 <link rel='icon' type='image/x-icon' href="<?=base_url("img/favicon.ico")?>"> 
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="robots" content="all">
 <meta name="keywords" content="Andro,Andro Chen,andro0929,陳俊安,Web Developer,網站工程師,網頁工程師">
 <meta name="author" content="Andro Chen">
-<meta name="copyright" content="本網頁著作權屬Andro Chen(陳俊安)所有">
+<meta name="dcterms.rights" content="本網頁著作權屬Andro Chen(陳俊安)所有">
+<meta name="dcterms.dateCopyrighted" content="2013">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -29,3 +30,15 @@
 		}
 	?>	
 </title>
+
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-36082223-1']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+</script>

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw"
-    xmlns:fb="http://www.facebook.com/2008/fbml"
-    xmlns:og="http://ogp.me/ns#">
+<html lang="zh-tw">
 <head>
   <?php include("_site_header.php");?>
 </head> 
