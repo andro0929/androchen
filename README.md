@@ -1,11 +1,11 @@
-## Andro Chen's Website ##
+## Andro Chen's Website
 
-**Version: 1.0.2**
+**Version: 1.2.0**
 
-Date: 2013/4/22
+Date: 2013/4/28
 
-Comment: Use CSS Sprite for icons.
+Comment: Add Github repository demo pages.
 
-##Description##
+### Description
 
 [Andro Chen](http://androchen.qov.tw)'s website code. © Since November, 2012

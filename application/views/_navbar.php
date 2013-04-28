@@ -12,6 +12,8 @@
 	</div>
   -->
     	<i class="icon-star icon-white"></i>
-    <a id="navbar-project" class="navbar-li" href="<?=site_url("/project")?>">Projects</a>
+    <a id="navbar-projects" class="navbar-li" href="<?=site_url("/projects")?>">Projects</a>
+      <i class="icon-star icon-white"></i>
+    <a id="navbar-demos" class="navbar-li" href="<?=site_url("/demos")?>">Demos</a>
   </div>      
 </div>

@@ -43,7 +43,8 @@ $route['404_override'] = '';
 
 /* pages */
 $route["hireme"] = "site/hireme";
-$route["project"] = "site/project";
+$route["projects"] = "site/projects";
+$route["demos"] = "site/demos";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -16,10 +16,16 @@ class Site extends CI_Controller {
 			"pageTitle" => "Andro Chen's Resume - 陳俊安的履歷與作品集"
 		));
 	}
-	public function project() {
-		$this->load->view('project', Array(
-			"selector" => "project",
-			"pageTitle" => "Andro Chen's Project - 陳俊安執行過的專案"
+	public function projects() {
+		$this->load->view('projects', Array(
+			"selector" => "projects",
+			"pageTitle" => "Andro Chen's Projects - 陳俊安執行過的專案"
+		));
+	}
+	public function demos() {
+		$this->load->view('demos', Array(
+			"selector" => "demos",
+			"pageTitle" => "Andro Chen's Demos - 陳俊安寫過的Web Tool Demos"
 		));
 	}
 }

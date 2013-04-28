@@ -1,5 +1,5 @@
 <?php
-    $sprite_img_src = "img/icon_sprite.png";
+    $sprite_img_src = base_url("img/icon_sprite.png");
     $href_gmail = "mailto:andro0929@gmail.com";
     $href_fb = "http://www.facebook.com/AndroChen0929";
     $href_gplus = "https://plus.google.com/118026338822127492529/about";
@@ -10,7 +10,7 @@
     $href_portfolio = base_url("asset/portfolio_AndroChen.pdf");
 ?>
 <!--Sidebar content-->
-<div id="sidebar-andro-img"><img src="img/andro.jpg" alt="Andro Chen"></div>
+<div id="sidebar-andro-img"><img src="<?=base_url("img/andro.jpg")?>" alt="Andro Chen"></div>
 <div id="sidebar-andro-name">陳俊安 <span>Chen Chun-An</span></div>
 <div class="sidebar-social-info">
     <a href="<?=$href_gmail?>" id="sidebar-icon-gmail"

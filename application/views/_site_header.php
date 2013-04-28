@@ -1,7 +1,6 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?=base_url("css/bootstrap.min.css")?>">
 <link rel="stylesheet" href="<?=base_url("css/bootstrap-responsive.min.css")?>">
-<link rel="stylesheet" href="<?=base_url("css/addon.css")?>">  
 <link rel="stylesheet" href="<?=base_url("css/site.css")?>">
 <link rel='icon' type='image/x-icon' href="<?=base_url("img/favicon.ico")?>"> 
 

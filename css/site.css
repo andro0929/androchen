@@ -4,8 +4,9 @@
 /* footer */
 /* page: index */
 /* page: hire-me */
-/* page: project */
-
+/* page: projects */
+/* page: demos */
+/* addon.css */
 
 /* general */
 	@font-face {
@@ -26,6 +27,9 @@
 	}
 	h3 {
 		font-size: 25.5px;
+	}
+	dd {
+		margin-bottom: 10px;
 	}
 	#body-container {
 		margin: 0 auto;
@@ -58,6 +62,7 @@
 		height: 70px;
 		position: fixed;
 		top: 0px;
+		z-index: 501;
 		border-bottom: white 5px solid;
 		background-image: url("../img/bg-top.jpg");
 		box-shadow: 2px 2px #A57777;
@@ -179,7 +184,7 @@
 	#hireme-pdf a {
 		font-size: 20px;
 	}
-/* page: project */
+/* page: projects */
 	.project > li {
 		margin-bottom: 20px;
 	}
@@ -211,4 +216,63 @@
 	.project-readmore {
 		margin-top: -10px;
 		margin-left: 200px;
+	}
+/* page: demos */
+	.demos {
+		list-style-image: url("../img/icon_play.png");
+	}
+
+/* addon.css */
+	@media (max-width: 480px) and (orientation: portrait) {
+	        .panel {
+	            /* height: 380px;*/ /*460-80*/
+	            width: 320px;
+	            
+	        }
+			/*        
+	        .content {
+		    	width: 270px;
+		        padding: 25px;
+		        border: 1px solid #f00;
+	        }
+	        */     
+	        
+	    .no_radius {
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;    
+		}   
+	    
+		.item_box {
+		    background-color: white;
+			border: 1px solid #EEE;
+			line-height: 1.5em;
+			padding: 15px;
+			margin: 20px;
+			float: left;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			width: 250px;
+			box-shadow: 2px 1px 6px #EFEFEF -moz-box-shadow:2px 1px 6px #F2F4F3;
+			-webkit-box-shadow: 2px 1px 6px #F2F4F3;
+			margin-top: 10px;
+			display: block;
+		}
+		
+		.req_addr {
+			color:#63b2d9;
+		}
+
+		.datetime {
+			color:#63b2d9;
+			font-family: Georgia;
+		}
+
+		.req_desc {
+			color:#63b2d9;
+			font-size: 13px;
+			display: block;
+			margin-bottom: 5px;
+		}
 	}
