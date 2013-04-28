@@ -1,10 +1,10 @@
 ## Andro Chen's Website ##
 
-**Version: 1.0.1**
+**Version: 1.0.2**
 
 Date: 2013/4/22
 
-Comment: Re-layout.
+Comment: Use CSS Sprite for icons.
 
 ##Description##
 
