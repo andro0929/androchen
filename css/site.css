@@ -107,19 +107,49 @@
 	#sidebar-andro-img img {
 		width: 200px;
 	}
-	#sidebar-social-info {
+	.sidebar-social-info {
+		height: 17px;
+		overflow: hidden;
 		margin-bottom: 10px;
 	}
-	#sidebar-social-info a {
+	.sidebar-social-info a {
 		margin-right: 3px;
 		margin-left: 3px;
+		text-decoration: none;
 	}
-	#sidebar-portfolio img {
-		width: 16px;
+	#sidebar-icon-gmail img {
+		top: -77px;
+		position: relative;
 	}
-	.sidebar-mysite {
-		margin-top: 5px;
+	#sidebar-icon-fb img {
+		top: -26px;
+		position: relative;
 	}
+	#sidebar-icon-gplus img {
+		top: -103px;
+		position: relative;
+	}
+	#sidebar-icon-linkedin img {
+		top: -129px;
+		position: relative;
+	}
+	#sidebar-icon-github img {
+		top: -51px;
+		position: relative;
+	}
+	#sidebar-icon-blogger img {
+		top: 0;
+		position: relative;
+	}
+	#sidebar-icon-wordpress img {
+		top: -182px;
+		position: relative;
+	}
+	#sidebar-icon-portfolio img {
+		top: -155px;
+		position: relative;
+	}
+
 /* footer */
 	#footer-container {
 		margin: 0 auto;
