@@ -54,13 +54,13 @@
               <ul class="project">
                 <li>
                   <div class="project-title">
-                    Andro's Facebook SDK Demo - <a href='<?=site_url("/demos/fb-login-jssdk")?>'>Mobile Web Tutorial</a>
+                    Andro's Facebook SDK Demo - <a href='http://androdemo.qov.tw/fb-login-jssdk'>Mobile Web Tutorial</a>
                   </div>
                   <div class="project-box">
-                    <div class="project-img"><a href="<?=site_url("/demos/fb-login-jssdk")?>"><img src="<?=base_url("/img/project/fb-mobile-web.jpg")?>"></a></div>
+                    <div class="project-img"><a href="http://androdemo.qov.tw/fb-login-jssdk"><img src="<?=base_url("/img/project/fb-mobile-web.jpg")?>"></a></div>
                     <div class="project-caption">
-                      本 Demo 頁將呈現 <a href="<?=site_url("/wordpress/2012/11/08/facebook-mobile-web-step-by-step/")?>">Step by step – 5 步實作 Facebook Mobile Web</a> 的實作內容，為您示範如何輕鬆又正確地利用 Facebook 作為您網站開發的一部份。在 <a href="https://github.com/andro0929/fb-login-jssdk">Github</a> 上也有原始碼可供下載。
-                      <div class="project-readmore"><a href="<?=site_url("/demos/fb-login-jssdk")?>">>> Read more...</a></div>
+                      本 Demo 頁將呈現 <a href="http://androsays.qov.tw/?p=18">Step by step – 5 步實作 Facebook Mobile Web</a> 的實作內容，為您示範如何輕鬆又正確地利用 Facebook 作為您網站開發的一部份。在 <a href="https://github.com/andro0929/fb-login-jssdk">Github</a> 上也有原始碼可供下載。
+                      <div class="project-readmore"><a href="<http://androdemo.qov.tw/fb-login-jssdk">>> Read more...</a></div>
                     </div>                    
                   </div>  
                 </li>
