@@ -98,6 +98,10 @@
 		font-weight: bold;
 		text-decoration: underline;
 	}
+	#site_logo {
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
 
 /* sidebar */
 	#sidebar-andro-name {	
