@@ -22,7 +22,7 @@
                 <p>我是一位網頁工程師，專注於 HTML5, PHP, JavaScript 開發。</p>
                 <p>將於 2013/7 畢業自台大電機系。</p>
                 <br>
-                <h3><i class="icon-play index-li"></i> And I'm Looking For a Job</h3>
+                <h3><i class="icon-play index-li"></i> And I'm Now Working for 5945 and beBit</h3>
                 <p>現正積極尋找 <b>網站開發，使用者經驗</b> 相關工作。</p>
                 <p>我勇於接受各種挑戰，積極地學習各項新事物，並對自己的語言、溝通能力非常有自信。</p>
                 <p>曾在 <a href="http://5945.tw">5945 呼叫師傅</a> 擔任軟體工程師(實習)一職。</p>

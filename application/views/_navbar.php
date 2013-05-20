@@ -1,5 +1,5 @@
 <div id="navbar-container">
-  <div id="navbar-brand"><h2><a href="<?=site_url("/")?>">Andro Chen</a></h2></div>
+  <div id="navbar-brand"><h2><img id="site_logo" src="img/logo-andro.png"> <a href="<?=site_url("/")?>">Andro Chen</a></h2></div>
   <div id="navbar-inner">
     <a id="navbar-index" class="navbar-li" href="<?=site_url("/")?>">About</a>
     	<i class="icon-star icon-white"></i>

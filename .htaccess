@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteCond $1 !^(index\.php|demo_|asset|css|img|js|wordpress|robots\.txt|favicon\.ico|$)
+RewriteCond $1 !^(index\.php|asset|css|img|js|robots\.txt|$)
 RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 
 RedirectMatch 301 ^/hireme.php$ /hireme
