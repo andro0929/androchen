@@ -3,6 +3,28 @@
 <script>
 	// mark navbar selected item
 	$("#navbar-<?=$selector?>").addClass("selected");
+
+	$("#translation").mouseover(function() {
+		$("#translation").animate({"right": "+=20px"}, "fast");
+	})
+	$("#translation").mouseout(function() {
+		$("#translation").animate({"right": "-=20px"}, "fast");
+	})
+	
+	$("#translation").click(function() {
+		if($("#content_zh").is(":visible")) {
+			$("#content_zh").slideToggle('slow', function() {
+				$("#content_en").slideToggle('slow', function() {
+				});
+			});
+		}
+		else {
+			$("#content_en").slideToggle('slow', function() {
+				$("#content_zh").slideToggle('slow', function() {
+				});
+			});
+		}
+	});
 </script>
 
 <div id="footer-inner">

@@ -17,23 +17,23 @@
         </div>
         <div class="span9">
           <!--Body content-->
-          <h1>Tools on Github</h1>
+          <h2>AndroDemo - Useful WebDev Tools</h2>
           <h3>PHP, CodeIgniter</h3>
           <dl class="dl-horizontal">
             <dt><a href="http://androdemo.qov.tw/package-ci-bootstrap">package-ci-bootstrap</a></dt>
-            <dd>This is a quick package for <strong>CodeIgniter and Bootstrap </strong> combination. 這是一個結合了 CodeIgniter 與 Bootstrap 的網頁版型，下載完直接可以啟用</dd>
+            <dd>結合了 CodeIgniter 與 Bootstrap 的網頁版型，下載後直接啟用<br>Quick package for <strong>CodeIgniter and Bootstrap </strong> combination.</dd>
             <dt><a href="http://androdemo.qov.tw/ci-pagination">ci-pagination</a></dt>
-            <dd>This is an implementation of <strong>pagination of CodeIgniter</strong>, using <a href="https://github.com/andro0929/package-CI-bootstrap">my package-CI-Bootstrap on GitHub</a> to accomplish further development. </dd>
+            <dd>使用 Codeigniter 實作資料分頁<br>Implementation of <strong>pagination of CodeIgniter</strong>, using <a href="https://github.com/andro0929/package-CI-bootstrap">my package-CI-Bootstrap on GitHub</a> to accomplish further development.</dd>
             <dt><a href="http://androdemo.qov.tw/ci-recaptcha">ci-recaptcha</a></dt>
-            <dd>This is the implementation of <a href="https://github.com/Cnordbo/RECaptcha-for-Codeigniter">Cnordbo's RECaptcha-for-Codeigniter</a>, while the whole CI-setup and re-layout views are included. </dd>
+            <dd>使用 CodeIgniter 實作 reCaptcha 登入驗證<br>Implementation of <a href="https://github.com/Cnordbo/RECaptcha-for-Codeigniter">Cnordbo's RECaptcha-for-Codeigniter</a>, while the whole CI-setup and re-layout views are included.</dd>
           </dl>
 
           <h3>Facebook SDK</h3>
           <dl class="dl-horizontal">
             <dt><a href="http://androdemo.qov.tw/fb-login-jssdk">fb-login-jssdk</a></dt>
-            <dd>This is the <strong>client-side</strong> login of Facebook using jssdk.</dd>
+            <dd><strong>Client-side</strong> login of Facebook using jssdk.</dd>
             <dt><a href="http://androdemo.qov.tw/fb-login-server">fb-login-server</a></dt>
-            <dd>This is the <strong>server-side</strong> login of Facebook using php.</dd>
+            <dd><strong>Server-side</strong> login of Facebook using php.</dd>
           </dl>
 
           <h3>Others</h3>
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>  
-    <a href="https://github.com/andro0929"><img style="position: absolute; top: 99px; right: 176px; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/andro0929"><img style="position: absolute; top: 99px; margin-left:770px; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
   </div>
   <!-- content ends -->
 </div>

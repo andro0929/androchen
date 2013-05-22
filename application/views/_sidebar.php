@@ -6,7 +6,7 @@
     $href_linkedin = "http://www.linkedin.com/in/androchen";
     $href_github = "https://github.com/andro0929";
     $href_blogger = "http://androchen.blogspot.tw/";
-    $href_wordpress = "http://androchen.qov.tw/wordpress";
+    $href_wordpress = "http://androsays.qov.tw";
     $href_portfolio = base_url("asset/portfolio_AndroChen.pdf");
 ?>
 <!--Sidebar content-->
